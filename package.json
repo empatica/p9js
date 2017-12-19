@@ -1,0 +1,20 @@
+{
+  "name": "p9js",
+  "version": "0.0.1",
+  "description": "Lightweight js manipulation library",
+  "main": "./dist/p9.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marco Bassi <poltro90.mb@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-typescript": "^3.2.3",
+    "gulp-uglify": "^3.0.0",
+    "typescript": "^2.6.2"
+  }
+}
