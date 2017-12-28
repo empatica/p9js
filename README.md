@@ -2,8 +2,10 @@
 Lightweight js library
 
 ## Build
+```
 npm install
 ./node_modules/.bin/gulp build
+```
 
 ## Usage
 Import dist file, `p9.js` or the minified version `p9.min.js`. 

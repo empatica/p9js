@@ -5,11 +5,11 @@ var P9;
             this.list = list;
         }
         Selector.prototype.addClass = function (c) {
-            this.list.forEach(function (e) {
-                if ((' ' + e.className + ' ').indexOf(' ' + c + ' ') < 0) {
-                    e.className += (' ' + c);
+            for (var i = 0; i < this.list.length; i++) {
+                if ((' ' + this.list[i].className + ' ').indexOf(' ' + c + ' ') < 0) {
+                    this.list[i].className += (' ' + c);
                 }
-            });
+            }
         };
         Selector.prototype.click = function (cb) {
             return this.event('click', cb);
@@ -21,9 +21,10 @@ var P9;
             return this.list[0].dataset ? this.list[0].dataset[d] : this.list[0].getAttribute('data-' + d);
         };
         Selector.prototype.event = function (evt, cb) {
-            this.list.forEach(function (e) {
-                e.addEventListener(evt, cb);
-            });
+            for (var i = 0; i < this.list.length; i++) {
+                this.list[i].addEventListener(evt, cb);
+            }
+            ;
         };
         Selector.prototype.hasClass = function (c) {
             if (this.list.length != 1) {
@@ -35,9 +36,10 @@ var P9;
             return this.event('load', cb);
         };
         Selector.prototype.removeClass = function (c) {
-            this.list.forEach(function (e) {
-                e.className = (' ' + e.className + ' ').replace(' ' + c + ' ', '').trim();
-            });
+            for (var i = 0; i < this.list.length; i++) {
+                this.list[i].className = (' ' + this.list[i].className + ' ').replace(' ' + c + ' ', '').trim();
+            }
+            ;
         };
         return Selector;
     }());

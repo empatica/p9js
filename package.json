@@ -1,6 +1,6 @@
 {
   "name": "p9js",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Lightweight js manipulation library",
   "main": "./dist/p9.js",
   "scripts": {

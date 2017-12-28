@@ -6,11 +6,11 @@ module P9 {
     }
 
     addClass(c: string) {
-      (<any>this.list).forEach(e => {
-        if ((' ' + e.className + ' ').indexOf(' ' + c + ' ') < 0) {
-          e.className += (' ' + c);
+      for (var i = 0; i < this.list.length; i++) {
+        if ((' ' + this.list[i].className + ' ').indexOf(' ' + c + ' ') < 0) {
+          this.list[i].className += (' ' + c);
         }
-      });
+      }
     }
 
     click(cb: any) {
@@ -25,9 +25,9 @@ module P9 {
     }
 
     event(evt: string, cb: any) {
-      (<any>this.list).forEach(e => {
-        e.addEventListener(evt, cb);
-      });
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].addEventListener(evt, cb);
+      };
     }
 
     hasClass(c: string): boolean {
@@ -42,9 +42,9 @@ module P9 {
     }
 
     removeClass(c: string) {
-      (<any>this.list).forEach(e => {
-        e.className = (' ' + e.className + ' ').replace(' ' + c + ' ', '').trim();
-      });
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].className = (' ' +  this.list[i].className + ' ').replace(' ' + c + ' ', '').trim();
+      };
     }
 
   }
